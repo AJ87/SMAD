@@ -17,14 +17,17 @@
     <nav>
       <div id='cssmenu'>
       <ul>
-         <li class='active' onclick="menuSelect(this)" id='contactMenu'><a href='#contact'><span>Contacts</span></a></li>
-         <li onclick="menuSelect(this)" id='emergMenu'><a href='#emergency'><span>Emergency Contacts</span></a></li>
+         <li class='active' onclick="menuSelect(this)" id='contactMenu'><a href='#contact'><span>Contact Info</span></a></li>
+         <li onclick="menuSelect(this)" id='emergMenu'><a href='#emergency'><span>Emergency Contact</span></a></li>
          <li onclick="menuSelect(this)" id='childMenu'><a href='#child'><span>Child Details</span></a></li>
-         <li class='lastMenu' onclick="menuSelect(this)" id='lastMenu'><a href='#last'><span>Agreements</span></a></li>
+         <li class='consentMenu' onclick="menuSelect(this)" id='consentMenu'><a href='#consent'><span>Consent</span></a></li>
       </ul>
       </div>
     </nav>
   </header>
+
+
+
   <article>
     <section id="contact">
 
@@ -32,19 +35,23 @@
       <div class="flex-container" id='container'>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="p1[firstName]">First Name</label></div>
-          <div class='flex-subitem-input'><input type="text" name="p1[firstName]" placeholder="First Name" required></input></div>
+          <div class='flex-subitem-input'><input type="text" name="p1[firstName]" placeholder="First Name" maxlength=20 size=20 required></input></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="p1[lastName]">Last Name</label></div>
-          <div class='flex-subitem-input'><input type="text" name="p1[lastName]" placeholder="Last Name" required></input></div>
+          <div class='flex-subitem-input'><input type="text" name="p1[lastName]" placeholder="Last Name" maxlength=20 size=20 required></input></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="p1[mobile]">Mobile Number</label></div>
-          <div class='flex-subitem-input'><input type="tel" name="p1[mobile]" placeholder="Mobile" required></input></div>
+          <div class='flex-subitem-input'><input type="tel" name="p1[mobile]" placeholder="Mobile" maxlength=10 size=10 required></input></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="p1[email]">Email</label></div>
-          <div class='flex-subitem-input'><input type="email" name="p1[email]" placeholder="Email" required></input></div>
+          <div class='flex-subitem-input'><input type="email" name="p1[email]" placeholder="Email" maxlength=40 size=40 required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="p1[address]">Home Address</label></div>
+          <div class='flex-subitem-input'><input type="text" name="p1[address]" placeholder="Home Address" maxlength=60 size=40 required></input></div>
         </div>
       </div>
 
@@ -55,51 +62,321 @@
       <div class='flex-container' id='container'>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="e[firstName]">First Name</label></div>
-          <div class='flex-subitem-input'><input type="text" name="e[firstName]" placeholder="First Name" required></input></div>
+          <div class='flex-subitem-input'><input type="text" name="e[firstName]" placeholder="First Name" maxlength=20 size=20 required></input></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="e[lastName]">Last Name</label></div>
-          <div class='flex-subitem-input'><input type="text" name="p1[lastName]" placeholder="Last Name" required></input></div>
+          <div class='flex-subitem-input'><input type="text" name="p1[lastName]" placeholder="Last Name" maxlength=20 size=20 required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="e[relationship]">Relationship to Child</label></div>
+          <div class='flex-subitem-input'><input list="relations" name="e[relationship]" placeholder='Relationship' required></input>
+            <datalist id='relations'>
+              <option value='Mother'>
+              <option value='Father'>
+              <option value='Aunt'>
+              <option value='Uncle'>
+              <option value='Grandmother'>
+              <option value='Grandfather'>
+              <option value='Other'>
+            </datalist>
+          </div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="e[mobile]">Mobile Number</label></div>
-          <div class='flex-subitem-input'><input type="tel" name="e[mobile]" placeholder="Mobile" required></input></div>
-        </div>
-        <div class='flex-item' id='item'>
-          <div class='flex-subitem'></div><div class='flex-subitem'><label for="e[relationship]">Relationship</label></div>
-          <div class='flex-subitem-input'><input type="text" name="e[relationship]" placeholder="Relationship" required></input></div>
+          <div class='flex-subitem-input'><input type="tel" name="e[mobile]" placeholder="Mobile" maxlength=10 size=10 required></input></div>
         </div>
       </div>
 
     </section>
     <section id="child">
 
-      <h1>Child Details</h1>
+      <h1>Child Info</h1>
       <div class='flex-container' id='container'>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[firstName]">First Name</label></div>
-          <div class='flex-subitem-input'><input type="text" name="c1[firstName]" placeholder="First Name" required></input></div>
+          <div class='flex-subitem-input'><input type="text" name="c1[firstName]" placeholder="First Name" maxlength=20 size=20 required></input></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[lastName]">Last Name</label></div>
-          <div class='flex-subitem-input'><input type="text" name="c1[lastName]" placeholder="Last Name" required></input></div>
+          <div class='flex-subitem-input'><input type="text" name="c1[lastName]" placeholder="Last Name" maxlength=20 size=20 required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[birthdate]">Birthdate</label></div>
+          <div class='flex-subitem-input'><input type="date" name="c1[birthdate]" placeholder="Birthdate" min='2000-01-01' max='2010-12-31' required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[gender]">Gender</label></div>
+          <div class='flex-subitem-input'>
+            <input list="gender" name="c1[gender]" placeholder='Gender' required></input>
+            <datalist id='gender'>
+              <option value='Male'>
+              <option value='Female'>
+              <option value='Unspecified'>
+            </datalist>
+          </div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[school]">School</label></div>
+          <div class='flex-subitem-input'><input type="text" name="c1[school]" placeholder="School" maxlength=20 size=20 required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[year]">Year (beginning February 2017)</label></div>
+          <div class='flex-subitem-input'><input list="year" name="c1[year]" placeholder='Year from Feb 2017' required></input></div>
+          <datalist id='year'>
+            <option value='Kindergarten'>
+            <option value='Year 1'>
+            <option value='Year 2'>
+            <option value='Year 3'>
+            <option value='Year 4'>
+            <option value='Year 5'>
+            <option value='Year 6'>
+            <option value='Year 7'>
+          </datalist>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[t-shirt]">T-Shirt Size</label></div>
+          <div class='flex-subitem-input'><input list="t-shirt" name="c1[t-shirt]" placeholder="T-Shirt Size" required></input></div>
+          <datalist id='t-shirt'>
+            <option value='6'>
+            <option value='8'>
+            <option value='10'>
+            <option value='12'>
+            <option value='14'>
+          </datalist>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[friend]">Friend request (in same year only)</label></div>
+          <div class='flex-subitem-input'><textarea name="c1[friend]" placeholder="Friend request (in same year only)" maxlength=100 rows=3 cols=30 required></textarea></div>
+        </div>
+        <h1>Health Details</h1>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[medicare]">Medicare Number</label></div>
+          <div class='flex-subitem-input'><input type="text" name="c1[medicare]" placeholder="Medicare No" maxlength=10 size=10 required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[medNumber]">Number on Card</label></div>
+          <div class='flex-subitem-input'><input type="number" name="c1[medNumber]" placeholder='No' min=0 max=10 required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[allergies]">Allergies</label></div>
+          <div class='flex-subitem-input'><textarea name="c1[allergies]" placeholder="Allergies" maxlength=200 rows=5 cols=30 required></textarea></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[dietary]">Dietary Info</label></div>
+          <div class='flex-subitem-input'><textarea name="c1[dietary]" placeholder="Dietary Info" maxlength=200 rows=5 cols=30 required></textarea></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[medication]">Medication</label></div>
+          <div class='flex-subitem-input'><textarea name="c1[medication]" placeholder="Medication" maxlength=200 rows=5 cols=30 required></textarea></div>
         </div>
       </div>
 
+<! Child 2>
+      <div class='child2' id='child2'>
+        <h1>Child Info 2</h1>
+        <div class='flex-container' id='container'>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[firstName]">First Name</label></div>
+            <div class='flex-subitem-input'><input type="text" name="c2[firstName]" placeholder="First Name" maxlength=20 size=20 required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[lastName]">Last Name</label></div>
+            <div class='flex-subitem-input'><input type="text" name="c2[lastName]" placeholder="Last Name" maxlength=20 size=20 required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[birthdate]">Birthdate</label></div>
+            <div class='flex-subitem-input'><input type="date" name="c2[birthdate]" placeholder="Birthdate" min='2000-01-01' max='2010-12-31' required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[gender]">Gender</label></div>
+            <div class='flex-subitem-input'>
+              <input list="gender" name="c2[gender]" placeholder='Gender' required></input>
+            </div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[school]">School</label></div>
+            <div class='flex-subitem-input'><input type="text" name="c2[school]" placeholder="School" maxlength=20 size=20 required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[year]">Year (beginning February 2017)</label></div>
+            <div class='flex-subitem-input'><input list="year" name="c2[year]" placeholder='Year from Feb 2017' required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[t-shirt]">T-Shirt Size</label></div>
+            <div class='flex-subitem-input'><input list="t-shirt" name="c2[t-shirt]" placeholder="T-Shirt Size" required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[friend]">Friend request (in same year only)</label></div>
+            <div class='flex-subitem-input'><textarea name="c2[friend]" placeholder="Friend request (in same year only)" maxlength=100 rows=3 cols=30 required></textarea></div>
+          </div>
+          <h1>Health Details 2</h1>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[medicare]">Medicare Number</label></div>
+            <div class='flex-subitem-input'><input type="text" name="c2[medicare]" placeholder="Medicare No" maxlength=10 size=10 required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[medNumber]">Number on Card</label></div>
+            <div class='flex-subitem-input'><input type="number" name="c2[medNumber]" placeholder='No' min=0 max=10 required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[allergies]">Allergies</label></div>
+            <div class='flex-subitem-input'><textarea name="c2[allergies]" placeholder="Allergies" maxlength=200 rows=5 cols=30 required></textarea></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[dietary]">Dietary Info</label></div>
+            <div class='flex-subitem-input'><textarea name="c2[dietary]" placeholder="Dietary Info" maxlength=200 rows=5 cols=30 required></textarea></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[medication]">Medication</label></div>
+            <div class='flex-subitem-input'><textarea name="c2[medication]" placeholder="Medication" maxlength=200 rows=5 cols=30 required></textarea></div>
+          </div>
+        </div>
+      </div>
+
+<! Child 3>
+      <div class='child3' id='child3'>
+        <h1>Child Info 3</h1>
+        <div class='flex-container' id='container'>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[firstName]">First Name</label></div>
+            <div class='flex-subitem-input'><input type="text" name="c3[firstName]" placeholder="First Name" maxlength=20 size=20 required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[lastName]">Last Name</label></div>
+            <div class='flex-subitem-input'><input type="text" name="c3[lastName]" placeholder="Last Name" maxlength=20 size=20 required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[birthdate]">Birthdate</label></div>
+            <div class='flex-subitem-input'><input type="date" name="c3[birthdate]" placeholder="Birthdate" min='2000-01-01' max='2010-12-31' required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[gender]">Gender</label></div>
+            <div class='flex-subitem-input'>
+              <input list="gender" name="c3[gender]" placeholder='Gender' required></input>
+            </div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[school]">School</label></div>
+            <div class='flex-subitem-input'><input type="text" name="c3[school]" placeholder="School" maxlength=20 size=20 required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[year]">Year (beginning February 2017)</label></div>
+            <div class='flex-subitem-input'><input list="year" name="c3[year]" placeholder='Year from Feb 2017' required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[t-shirt]">T-Shirt Size</label></div>
+            <div class='flex-subitem-input'><input list="t-shirt" name="c3[t-shirt]" placeholder="T-Shirt Size" required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[friend]">Friend request (in same year only)</label></div>
+            <div class='flex-subitem-input'><textarea name="c3[friend]" placeholder="Friend request (in same year only)" maxlength=100 rows=3 cols=30 required></textarea></div>
+          </div>
+          <h1>Health Details 3</h1>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[medicare]">Medicare Number</label></div>
+            <div class='flex-subitem-input'><input type="text" name="c3[medicare]" placeholder="Medicare No" maxlength=10 size=10 required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[medNumber]">Number on Card</label></div>
+            <div class='flex-subitem-input'><input type="number" name="c3[medNumber]" placeholder='No' min=0 max=10 required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[allergies]">Allergies</label></div>
+            <div class='flex-subitem-input'><textarea name="c3[allergies]" placeholder="Allergies" maxlength=200 rows=5 cols=30 required></textarea></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[dietary]">Dietary Info</label></div>
+            <div class='flex-subitem-input'><textarea name="c3[dietary]" placeholder="Dietary Info" maxlength=200 rows=5 cols=30 required></textarea></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[medication]">Medication</label></div>
+            <div class='flex-subitem-input'><textarea name="c3[medication]" placeholder="Medication" maxlength=200 rows=5 cols=30 required></textarea></div>
+          </div>
+        </div>
+      </div>
+
+<! Child 4>
+      <div class='child4' id='child4'>
+        <h1>Child Info 4</h1>
+        <div class='flex-container' id='container'>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[firstName]">First Name</label></div>
+            <div class='flex-subitem-input'><input type="text" name="c4[firstName]" placeholder="First Name" maxlength=20 size=20 required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[lastName]">Last Name</label></div>
+            <div class='flex-subitem-input'><input type="text" name="c4[lastName]" placeholder="Last Name" maxlength=20 size=20 required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[birthdate]">Birthdate</label></div>
+            <div class='flex-subitem-input'><input type="date" name="c4[birthdate]" placeholder="Birthdate" min='2000-01-01' max='2010-12-31' required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[gender]">Gender</label></div>
+            <div class='flex-subitem-input'>
+              <input list="gender" name="c4[gender]" placeholder='Gender' required></input>
+            </div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[school]">School</label></div>
+            <div class='flex-subitem-input'><input type="text" name="c4[school]" placeholder="School" maxlength=20 size=20 required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[year]">Year (beginning February 2017)</label></div>
+            <div class='flex-subitem-input'><input list="year" name="c4[year]" placeholder='Year from Feb 2017' required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[t-shirt]">T-Shirt Size</label></div>
+            <div class='flex-subitem-input'><input list="t-shirt" name="c4[t-shirt]" placeholder="T-Shirt Size" required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[friend]">Friend request (in same year only)</label></div>
+            <div class='flex-subitem-input'><textarea name="c4[friend]" placeholder="Friend request (in same year only)" maxlength=100 rows=3 cols=30 required></textarea></div>
+          </div>
+          <h1>Health Details 4</h1>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[medicare]">Medicare Number</label></div>
+            <div class='flex-subitem-input'><input type="text" name="c4[medicare]" placeholder="Medicare No" maxlength=10 size=10 required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[medNumber]">Number on Card</label></div>
+            <div class='flex-subitem-input'><input type="number" name="c4[medNumber]" placeholder='No' min=0 max=10 required></input></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[allergies]">Allergies</label></div>
+            <div class='flex-subitem-input'><textarea name="c4[allergies]" placeholder="Allergies" maxlength=200 rows=5 cols=30 required></textarea></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[dietary]">Dietary Info</label></div>
+            <div class='flex-subitem-input'><textarea name="c4[dietary]" placeholder="Dietary Info" maxlength=200 rows=5 cols=30 required></textarea></div>
+          </div>
+          <div class='flex-item' id='item'>
+            <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[medication]">Medication</label></div>
+            <div class='flex-subitem-input'><textarea name="c4[medication]" placeholder="Medication" maxlength=200 rows=5 cols=30 required></textarea></div>
+          </div>
+        </div>
+      </div>
+
+<! Add Child Button>
       <button class='button' onclick='addChild(this)' id='btnChild'>Add Child</button>
 
     </section>
-    <section id="last">
+    <section id="consent">
 
-      <h1>Last Section</h1>
+      <h1>Consent</h1>
       <div class='flex-container' id='container'>
         <div class='flex-item' id='item'>
-          <div class='flex-subitem'></div><div class='flex-subitem'><label for="l[firstName]">First Name</label></div>
-          <div class='flex-subitem-input'><input type="text" name="l[firstName]" placeholder="First Name" required></input></div>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="l[enrolment]">I accept the <a href="consent.html#Enrolment" onClick="popup(this.href); return false;">Terms of Enrolment</a></label></div>
+          <div class='flex-subitem-input'><input type="checkbox" name="l[enrolment]" required></input></div>
         </div>
         <div class='flex-item' id='item'>
-          <div class='flex-subitem'></div><div class='flex-subitem'><label for="l[lastName]">Last Name</label></div>
-          <div class='flex-subitem-input'><input type="text" name="l[lastName]" placeholder="Last Name" required></input></div>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="l[firstAid]">I accept the <a href="consent.html#Safe" onClick="popup(this.href); return false;">First Aid/Safety Conditions</a></label></div>
+          <div class='flex-subitem-input'><input type="checkbox" name="l[firstAid]" required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="l[additional]">I accept the <a href="consent.html#Additional" onClick="popup(this.href); return false;">Additional Conditions</a></label></div>
+          <div class='flex-subitem-input'><input type="checkbox" name="l[additional]" required></input></div>
         </div>
       </div>
 

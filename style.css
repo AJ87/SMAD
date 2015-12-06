@@ -75,7 +75,11 @@ margin-left:15px;
 h1 {
 text-align: center;
 color: black;
-padding-top:15px;
+padding-top:3px;
+}
+
+#child2, #child3, #child4 {
+  display: none;
 }
 
 /* Advanced web design relies on class or ID style boxes*/
