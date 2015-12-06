@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta-charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="menustyles.css">
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="app.js"></script>
+<title>SMAD Camp Registration</title>
+</head>
+<body>
+  <header>
+  <//img src='SMADheader.png'>
+  <h1>SMAD Camp Registration</h1>
+    <nav>
+      <div id='cssmenu'>
+      <ul>
+         <li class='active' onclick="menuSelect(this)" id='contactMenu'><a href='#contact'><span>Contacts</span></a></li>
+         <li onclick="menuSelect(this)" id='emergMenu'><a href='#emergency'><span>Emergency Contacts</span></a></li>
+         <li onclick="menuSelect(this)" id='childMenu'><a href='#child'><span>Child Details</span></a></li>
+         <li class='lastMenu' onclick="menuSelect(this)" id='lastMenu'><a href='#last'><span>Agreements</span></a></li>
+      </ul>
+      </div>
+    </nav>
+  </header>
+  <article>
+    <section id="contact">
+
+      <h1>Parent/Guardian 1</h1>
+      <div class="flex-container" id='container'>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="p1[firstName]">First Name</label></div>
+          <div class='flex-subitem-input'><input type="text" name="p1[firstName]" placeholder="First Name" required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="p1[lastName]">Last Name</label></div>
+          <div class='flex-subitem-input'><input type="text" name="p1[lastName]" placeholder="Last Name" required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="p1[mobile]">Mobile Number</label></div>
+          <div class='flex-subitem-input'><input type="tel" name="p1[mobile]" placeholder="Mobile" required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="p1[email]">Email</label></div>
+          <div class='flex-subitem-input'><input type="email" name="p1[email]" placeholder="Email" required></input></div>
+        </div>
+      </div>
+
+    </section>
+    <section id="emergency">
+
+      <h1>Emergency Contact</h1>
+      <div class='flex-container' id='container'>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="e[firstName]">First Name</label></div>
+          <div class='flex-subitem-input'><input type="text" name="e[firstName]" placeholder="First Name" required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="e[lastName]">Last Name</label></div>
+          <div class='flex-subitem-input'><input type="text" name="p1[lastName]" placeholder="Last Name" required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="e[mobile]">Mobile Number</label></div>
+          <div class='flex-subitem-input'><input type="tel" name="e[mobile]" placeholder="Mobile" required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="e[relationship]">Relationship</label></div>
+          <div class='flex-subitem-input'><input type="text" name="e[relationship]" placeholder="Relationship" required></input></div>
+        </div>
+      </div>
+
+    </section>
+    <section id="child">
+
+      <h1>Child Details</h1>
+      <div class='flex-container' id='container'>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[firstName]">First Name</label></div>
+          <div class='flex-subitem-input'><input type="text" name="c1[firstName]" placeholder="First Name" required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[lastName]">Last Name</label></div>
+          <div class='flex-subitem-input'><input type="text" name="c1[lastName]" placeholder="Last Name" required></input></div>
+        </div>
+      </div>
+
+      <button class='button' onclick='addChild(this)' id='btnChild'>Add Child</button>
+
+    </section>
+    <section id="last">
+
+      <h1>Last Section</h1>
+      <div class='flex-container' id='container'>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="l[firstName]">First Name</label></div>
+          <div class='flex-subitem-input'><input type="text" name="l[firstName]" placeholder="First Name" required></input></div>
+        </div>
+        <div class='flex-item' id='item'>
+          <div class='flex-subitem'></div><div class='flex-subitem'><label for="l[lastName]">Last Name</label></div>
+          <div class='flex-subitem-input'><input type="text" name="l[lastName]" placeholder="Last Name" required></input></div>
+        </div>
+      </div>
+
+    </section>
+  </article>
+</body>
+</html>

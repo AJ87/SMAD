@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* The body tag style applies to all elements on the page */
+body {
+background-color: white;
+font-family: Verdana, Geneva, Arial, sans-serif;
+padding:0px;
+margin:0px;
+}
+
+section {
+  color: green;
+  display: none;
+  text-align: center;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+
+/*  border: 3px solid red; */
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: column wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  padding: 5px;
+  margin-top: 10px;
+
+/*  border: 3px solid #555; */
+
+  display: flex;
+
+  color: green;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.flex-subitem {
+  margin-left: 10px;
+  display: flex;
+  align-items: flex-start;
+
+  flex: 1;
+
+/*  border: 3px solid blue; */
+}
+
+.flex-subitem-input {
+  margin-left: 10px;
+  display: flex;
+  align-items: flex-start;
+
+  flex: 2;
+
+/*  border: 3px solid blue; */
+}
+
+/* Selector for tags separated by commas applies the style to all tags */
+h1,h2,h3,h4,h5,h6,p,li {
+margin-left:15px;
+}
+
+h1 {
+text-align: center;
+color: black;
+padding-top:15px;
+}
+
+/* Advanced web design relies on class or ID style boxes*/
+.box {
+height: 100px;
+width: 100px;
+float: left;
+margin: 15px;
+padding: 25px;
+background: #A8D977;
+border:2px solid gray;
+}
+
+/* The following pseudo-class applies to the box class when in a hovered state */
+.box:hover {
+background-color:#F2B544;
+border-bottom:2px solid black;
+}
+
+/* This clear class style terminates float */
+.clear{
+clear: both;
+}
+
+}
+header, footer {
+background-color: F27830;
+color: red;
+padding-top:5px;
+padding-bottom:5px;
+}
