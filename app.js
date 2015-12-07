@@ -19,6 +19,10 @@ function app() {
 
   child = factory();
 
+  function setValues(obj) {
+    document.getElementsByName(obj.setName)[0].value = document.getElementsByName(obj.getName)[0].value;
+  }
+
   function showHide(id, vis) {
     var actions = {
       'contactMenu': function(vis) {
@@ -48,6 +52,21 @@ function app() {
       document.getElementById('btnChild').style.display = 'block';
       document.getElementById('btnRemove').style.display = 'block';
       window.location.href = window.location.pathname + '#child' + child.get();
+
+      var childlast = child.get() - 1;
+      setValues( {
+        setName: 'c' + child.get() + '[lastName]',
+        getName: 'c' + childlast + '[lastName]'
+      });
+      setValues( {
+        setName: 'c' + child.get() + '[school]',
+        getName: 'c' + childlast + '[school]'
+      });
+      setValues( {
+        setName: 'c' + child.get() + '[medicare]',
+        getName: 'c' + childlast + '[medicare]'
+      });
+
       if (child.get() === 4) {
         button.style.display = 'none';
       };
@@ -63,14 +82,20 @@ function app() {
       };
     },
     menuSelect: function(elem) {
-      oldMenuItem.className = 'not';
+      oldMenuItem.className = 'inactive';
       elem.className = 'active';
-
       showHide(oldMenuItem.id, 'none');
-
       oldMenuItem = elem;
-
       showHide(elem.id, 'block');
+
+      setValues( {
+        setName: 'e[lastName]',
+        getName: 'p1[lastName]'
+      });
+      setValues( {
+        setName: 'c1[lastName]',
+        getName: 'p1[lastName]'
+      });
     },
     setup: function() {
       oldMenuItem = document.getElementById('contactMenu');
