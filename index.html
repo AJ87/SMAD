@@ -17,10 +17,10 @@
     <nav>
       <div id='cssmenu'>
       <ul>
-         <li class='active' onclick="menuSelect(this)" id='contactMenu'><a href='#contact'><span>Contact Info</span></a></li>
-         <li onclick="menuSelect(this)" id='emergMenu'><a href='#emergency'><span>Emergency Contact</span></a></li>
-         <li onclick="menuSelect(this)" id='childMenu'><a href='#child'><span>Child Details</span></a></li>
-         <li class='consentMenu' onclick="menuSelect(this)" id='consentMenu'><a href='#consent'><span>Consent</span></a></li>
+         <li class='active' onclick="app.menuSelect(this)" id='contactMenu'><a href='#contact'><span>Contact Info</span></a></li>
+         <li onclick="app.menuSelect(this)" id='emergMenu'><a href='#emergency'><span>Emergency Contact</span></a></li>
+         <li onclick="app.menuSelect(this)" id='childMenu'><a href='#child'><span>Child Details</span></a></li>
+         <li class='consentMenu' onclick="app.menuSelect(this)" id='consentMenu'><a href='#consent'><span>Consent</span></a></li>
       </ul>
       </div>
     </nav>
@@ -31,7 +31,7 @@
   <article>
     <section id="contact">
 
-      <h1>Parent/Guardian 1</h1>
+      <h1>Parent/Guardian</h1>
       <div class="flex-container" id='container'>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="p1[firstName]">First Name</label></div>
@@ -359,7 +359,8 @@
       </div>
 
 <! Add Child Button>
-      <button class='button' onclick='addChild(this)' id='btnChild'>Add Child</button>
+      <button class='button' onclick='app.addChild(this)' id='btnChild'>Add Child</button>
+      <button class='button' onclick='app.removeChild(this)' id='btnRemove' style="display:none">Remove Child</button>
 
     </section>
     <section id="consent">
