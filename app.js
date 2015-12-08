@@ -41,6 +41,37 @@ function app() {
     return actions[id](vis);
   }
 
+  function validateCharacters(text) {
+    var letters = /^[A-Za-z]+$/;
+    return text.value.match(letters);
+  }
+
+  function validateTenDigits(number) {
+    var numbers = /^\d{10}$/;
+    return number.value.match(numbers);
+  }
+
+  function validateContactInfo() {
+    var elem;
+    elem = document.getElementByName('p1[firstName]');
+    if (validateCharacters(elem.value)) {
+
+    }
+
+    elem = document.getElementByName('p1[lastName]');
+
+    elem = document.getElementByName('p1[mobile]');
+
+  }
+
+  function validateEmergencyContacts() {
+
+  }
+
+  function validateChildInfo() {
+
+  }
+
   return {
     popup: function(url) {
       var popup=window.open(url,'Conditions','height=300,width=500,scrollbars=1,resizable=1,toolbar=1');

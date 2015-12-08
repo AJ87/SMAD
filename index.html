@@ -26,7 +26,8 @@
     </nav>
   </header>
 
-
+<! Form>
+  <form id='smadRego' action="http://127.0.0.1:3000/">
 
   <article>
     <section id="contact">
@@ -35,15 +36,15 @@
       <div class="flex-container" id='container'>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="p1[firstName]">First Name</label></div>
-          <div class='flex-subitem-input'><input type="text" name="p1[firstName]" placeholder="First Name" maxlength=20 size=20 required></input></div>
+          <div class='flex-subitem-input'><input type="text" name="p1[firstName]" placeholder="First Name" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="p1[lastName]">Last Name</label></div>
-          <div class='flex-subitem-input'><input type="text" name="p1[lastName]" placeholder="Last Name" maxlength=20 size=20 required></input></div>
+          <div class='flex-subitem-input'><input type="text" name="p1[lastName]" placeholder="Last Name" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="p1[mobile]">Mobile Number</label></div>
-          <div class='flex-subitem-input'><input type="tel" name="p1[mobile]" placeholder="Mobile" maxlength=10 size=10 required></input></div>
+          <div class='flex-subitem-input'><input type="tel" name="p1[mobile]" placeholder="Mobile" maxlength=10 size=10 pattern='^04\d{8}$' title='Must be 10 digit number starting with 04'title='Must be 10 digit number starting with 04' required></input></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="p1[email]">Email</label></div>
@@ -55,6 +56,8 @@
         </div>
       </div>
 
+<input type='submit' value='Submit'></input>
+
     </section>
     <section id="emergency">
 
@@ -62,29 +65,29 @@
       <div class='flex-container' id='container'>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="e[firstName]">First Name</label></div>
-          <div class='flex-subitem-input'><input type="text" name="e[firstName]" placeholder="First Name" maxlength=20 size=20 required></input></div>
+          <div class='flex-subitem-input'><input type="text" name="e[firstName]" placeholder="First Name" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="e[lastName]">Last Name</label></div>
-          <div class='flex-subitem-input'><input type="text" name="e[lastName]" placeholder="Last Name" maxlength=20 size=20 required></input></div>
+          <div class='flex-subitem-input'><input type="text" name="e[lastName]" placeholder="Last Name" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="e[relationship]">Relationship to Child</label></div>
-          <div class='flex-subitem-input'><input list="relations" name="e[relationship]" placeholder='Relationship' required></input>
-            <datalist id='relations'>
-              <option value='Mother'>
-              <option value='Father'>
-              <option value='Aunt'>
-              <option value='Uncle'>
-              <option value='Grandmother'>
-              <option value='Grandfather'>
-              <option value='Other'>
-            </datalist>
+          <div class='flex-subitem-input'>
+            <select id='relations' form='smadRego' required>
+              <option value='Mother'>Mother</option>
+              <option value='Father'>Father</option>
+              <option value='Aunt'>Aunt</option>
+              <option value='Uncle'>Uncle</option>
+              <option value='Grandmother'>Grandmother</option>
+              <option value='Grandfather'>Grandfather</option>
+              <option value='Other'>Other</option>
+            </select>
           </div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="e[mobile]">Mobile Number</label></div>
-          <div class='flex-subitem-input'><input type="tel" name="e[mobile]" placeholder="Mobile" maxlength=10 size=10 required></input></div>
+          <div class='flex-subitem-input'><input type="tel" name="e[mobile]" placeholder="Mobile" maxlength=10 size=10 pattern='^04\d{8}$' title='Must be 10 digit number starting with 04'required></input></div>
         </div>
       </div>
 
@@ -95,11 +98,11 @@
       <div class='flex-container' id='container'>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[firstName]">First Name</label></div>
-          <div class='flex-subitem-input'><input type="text" name="c1[firstName]" placeholder="First Name" maxlength=20 size=20 required></input></div>
+          <div class='flex-subitem-input'><input type="text" name="c1[firstName]" placeholder="First Name" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[lastName]">Last Name</label></div>
-          <div class='flex-subitem-input'><input type="text" name="c1[lastName]" placeholder="Last Name" maxlength=20 size=20 required></input></div>
+          <div class='flex-subitem-input'><input type="text" name="c1[lastName]" placeholder="Last Name" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[birthdate]">Birthdate</label></div>
@@ -118,7 +121,7 @@
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[school]">School</label></div>
-          <div class='flex-subitem-input'><input type="text" name="c1[school]" placeholder="School" maxlength=20 size=20 required></input></div>
+          <div class='flex-subitem-input'><input type="text" name="c1[school]" placeholder="School" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[year]">Year (beginning February 2017)</label></div>
@@ -147,12 +150,12 @@
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[friend]">Friend request (in same year only)</label></div>
-          <div class='flex-subitem-input'><textarea name="c1[friend]" placeholder="Friend request (in same year only)" maxlength=100 rows=3 cols=30 required></textarea></div>
+          <div class='flex-subitem-input'><textarea name="c1[friend]" placeholder="Friend request (in same year only)" maxlength=100 rows=3 cols=30></textarea></div>
         </div>
         <h1>Health Details</h1>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[medicare]">Medicare Number</label></div>
-          <div class='flex-subitem-input'><input type="text" name="c1[medicare]" placeholder="Medicare No" maxlength=10 size=10 required></input></div>
+          <div class='flex-subitem-input'><input type="text" name="c1[medicare]" placeholder="Medicare No" maxlength=10 size=10 pattern='^04\d{8}$' title='Must be 10 digit number starting with 04'required></input></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[medNumber]">Number on Card</label></div>
@@ -160,15 +163,15 @@
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[allergies]">Allergies</label></div>
-          <div class='flex-subitem-input'><textarea name="c1[allergies]" placeholder="Allergies" maxlength=200 rows=5 cols=30 required></textarea></div>
+          <div class='flex-subitem-input'><textarea name="c1[allergies]" placeholder="Allergies" maxlength=200 rows=5 cols=30></textarea></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[dietary]">Dietary Info</label></div>
-          <div class='flex-subitem-input'><textarea name="c1[dietary]" placeholder="Dietary Info" maxlength=200 rows=5 cols=30 required></textarea></div>
+          <div class='flex-subitem-input'><textarea name="c1[dietary]" placeholder="Dietary Info" maxlength=200 rows=5 cols=30></textarea></div>
         </div>
         <div class='flex-item' id='item'>
           <div class='flex-subitem'></div><div class='flex-subitem'><label for="c1[medication]">Medication</label></div>
-          <div class='flex-subitem-input'><textarea name="c1[medication]" placeholder="Medication" maxlength=200 rows=5 cols=30 required></textarea></div>
+          <div class='flex-subitem-input'><textarea name="c1[medication]" placeholder="medication" maxlength=200 rows=5 cols=30></textarea></div>
         </div>
       </div>
 
@@ -178,11 +181,11 @@
         <div class='flex-container' id='container'>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[firstName]">First Name</label></div>
-            <div class='flex-subitem-input'><input type="text" name="c2[firstName]" placeholder="First Name" maxlength=20 size=20 required></input></div>
+            <div class='flex-subitem-input'><input type="text" name="c2[firstName]" placeholder="First Name" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[lastName]">Last Name</label></div>
-            <div class='flex-subitem-input'><input type="text" name="c2[lastName]" placeholder="Last Name" maxlength=20 size=20 required></input></div>
+            <div class='flex-subitem-input'><input type="text" name="c2[lastName]" placeholder="Last Name" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[birthdate]">Birthdate</label></div>
@@ -196,7 +199,7 @@
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[school]">School</label></div>
-            <div class='flex-subitem-input'><input type="text" name="c2[school]" placeholder="School" maxlength=20 size=20 required></input></div>
+            <div class='flex-subitem-input'><input type="text" name="c2[school]" placeholder="School" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[year]">Year (beginning February 2017)</label></div>
@@ -208,12 +211,12 @@
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[friend]">Friend request (in same year only)</label></div>
-            <div class='flex-subitem-input'><textarea name="c2[friend]" placeholder="Friend request (in same year only)" maxlength=100 rows=3 cols=30 required></textarea></div>
+            <div class='flex-subitem-input'><textarea name="c2[friend]" placeholder="Friend request (in same year only)" maxlength=100 rows=3 cols=30></textarea></div>
           </div>
           <h1>Health Details 2</h1>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[medicare]">Medicare Number</label></div>
-            <div class='flex-subitem-input'><input type="text" name="c2[medicare]" placeholder="Medicare No" maxlength=10 size=10 required></input></div>
+            <div class='flex-subitem-input'><input type="text" name="c2[medicare]" placeholder="Medicare No" maxlength=10 size=10 pattern='^04\d{8}$' title='Must be 10 digit number starting with 04'required></input></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[medNumber]">Number on Card</label></div>
@@ -221,15 +224,15 @@
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[allergies]">Allergies</label></div>
-            <div class='flex-subitem-input'><textarea name="c2[allergies]" placeholder="Allergies" maxlength=200 rows=5 cols=30 required></textarea></div>
+            <div class='flex-subitem-input'><textarea name="c2[allergies]" placeholder="Allergies" maxlength=200 rows=5 cols=30></textarea></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[dietary]">Dietary Info</label></div>
-            <div class='flex-subitem-input'><textarea name="c2[dietary]" placeholder="Dietary Info" maxlength=200 rows=5 cols=30 required></textarea></div>
+            <div class='flex-subitem-input'><textarea name="c2[dietary]" placeholder="Dietary Info" maxlength=200 rows=5 cols=30></textarea></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c2[medication]">Medication</label></div>
-            <div class='flex-subitem-input'><textarea name="c2[medication]" placeholder="Medication" maxlength=200 rows=5 cols=30 required></textarea></div>
+            <div class='flex-subitem-input'><textarea name="c2[medication]" placeholder="medication" maxlength=200 rows=5 cols=30></textarea></div>
           </div>
         </div>
       </div>
@@ -240,11 +243,11 @@
         <div class='flex-container' id='container'>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[firstName]">First Name</label></div>
-            <div class='flex-subitem-input'><input type="text" name="c3[firstName]" placeholder="First Name" maxlength=20 size=20 required></input></div>
+            <div class='flex-subitem-input'><input type="text" name="c3[firstName]" placeholder="First Name" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[lastName]">Last Name</label></div>
-            <div class='flex-subitem-input'><input type="text" name="c3[lastName]" placeholder="Last Name" maxlength=20 size=20 required></input></div>
+            <div class='flex-subitem-input'><input type="text" name="c3[lastName]" placeholder="Last Name" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[birthdate]">Birthdate</label></div>
@@ -258,7 +261,7 @@
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[school]">School</label></div>
-            <div class='flex-subitem-input'><input type="text" name="c3[school]" placeholder="School" maxlength=20 size=20 required></input></div>
+            <div class='flex-subitem-input'><input type="text" name="c3[school]" placeholder="School" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[year]">Year (beginning February 2017)</label></div>
@@ -270,12 +273,12 @@
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[friend]">Friend request (in same year only)</label></div>
-            <div class='flex-subitem-input'><textarea name="c3[friend]" placeholder="Friend request (in same year only)" maxlength=100 rows=3 cols=30 required></textarea></div>
+            <div class='flex-subitem-input'><textarea name="c3[friend]" placeholder="Friend request (in same year only)" maxlength=100 rows=3 cols=30></textarea></div>
           </div>
           <h1>Health Details 3</h1>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[medicare]">Medicare Number</label></div>
-            <div class='flex-subitem-input'><input type="text" name="c3[medicare]" placeholder="Medicare No" maxlength=10 size=10 required></input></div>
+            <div class='flex-subitem-input'><input type="text" name="c3[medicare]" placeholder="Medicare No" maxlength=10 size=10 pattern='^04\d{8}$' title='Must be 10 digit number starting with 04'required></input></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[medNumber]">Number on Card</label></div>
@@ -283,15 +286,15 @@
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[allergies]">Allergies</label></div>
-            <div class='flex-subitem-input'><textarea name="c3[allergies]" placeholder="Allergies" maxlength=200 rows=5 cols=30 required></textarea></div>
+            <div class='flex-subitem-input'><textarea name="c3[allergies]" placeholder="Allergies" maxlength=200 rows=5 cols=30></textarea></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[dietary]">Dietary Info</label></div>
-            <div class='flex-subitem-input'><textarea name="c3[dietary]" placeholder="Dietary Info" maxlength=200 rows=5 cols=30 required></textarea></div>
+            <div class='flex-subitem-input'><textarea name="c3[dietary]" placeholder="Dietary Info" maxlength=200 rows=5 cols=30></textarea></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c3[medication]">Medication</label></div>
-            <div class='flex-subitem-input'><textarea name="c3[medication]" placeholder="Medication" maxlength=200 rows=5 cols=30 required></textarea></div>
+            <div class='flex-subitem-input'><textarea name="c3[medication]" placeholder="medication" maxlength=200 rows=5 cols=30></textarea></div>
           </div>
         </div>
       </div>
@@ -302,11 +305,11 @@
         <div class='flex-container' id='container'>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[firstName]">First Name</label></div>
-            <div class='flex-subitem-input'><input type="text" name="c4[firstName]" placeholder="First Name" maxlength=20 size=20 required></input></div>
+            <div class='flex-subitem-input'><input type="text" name="c4[firstName]" placeholder="First Name" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[lastName]">Last Name</label></div>
-            <div class='flex-subitem-input'><input type="text" name="c4[lastName]" placeholder="Last Name" maxlength=20 size=20 required></input></div>
+            <div class='flex-subitem-input'><input type="text" name="c4[lastName]" placeholder="Last Name" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[birthdate]">Birthdate</label></div>
@@ -320,7 +323,7 @@
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[school]">School</label></div>
-            <div class='flex-subitem-input'><input type="text" name="c4[school]" placeholder="School" maxlength=20 size=20 required></input></div>
+            <div class='flex-subitem-input'><input type="text" name="c4[school]" placeholder="School" maxlength=20 size=20 pattern='^[A-Za-z\s]+$' title='Characters only' required></input></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[year]">Year (beginning February 2017)</label></div>
@@ -332,12 +335,12 @@
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[friend]">Friend request (in same year only)</label></div>
-            <div class='flex-subitem-input'><textarea name="c4[friend]" placeholder="Friend request (in same year only)" maxlength=100 rows=3 cols=30 required></textarea></div>
+            <div class='flex-subitem-input'><textarea name="c4[friend]" placeholder="Friend request (in same year only)" maxlength=100 rows=3 cols=30></textarea></div>
           </div>
           <h1>Health Details 4</h1>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[medicare]">Medicare Number</label></div>
-            <div class='flex-subitem-input'><input type="text" name="c4[medicare]" placeholder="Medicare No" maxlength=10 size=10 required></input></div>
+            <div class='flex-subitem-input'><input type="text" name="c4[medicare]" placeholder="Medicare No" maxlength=10 size=10 pattern='^04\d{8}$' title='Must be 10 digit number starting with 04'required></input></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[medNumber]">Number on Card</label></div>
@@ -345,15 +348,15 @@
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[allergies]">Allergies</label></div>
-            <div class='flex-subitem-input'><textarea name="c4[allergies]" placeholder="Allergies" maxlength=200 rows=5 cols=30 required></textarea></div>
+            <div class='flex-subitem-input'><textarea name="c4[allergies]" placeholder="Allergies" maxlength=200 rows=5 cols=30></textarea></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[dietary]">Dietary Info</label></div>
-            <div class='flex-subitem-input'><textarea name="c4[dietary]" placeholder="Dietary Info" maxlength=200 rows=5 cols=30 required></textarea></div>
+            <div class='flex-subitem-input'><textarea name="c4[dietary]" placeholder="Dietary Info" maxlength=200 rows=5 cols=30></textarea></div>
           </div>
           <div class='flex-item' id='item'>
             <div class='flex-subitem'></div><div class='flex-subitem'><label for="c4[medication]">Medication</label></div>
-            <div class='flex-subitem-input'><textarea name="c4[medication]" placeholder="Medication" maxlength=200 rows=5 cols=30 required></textarea></div>
+            <div class='flex-subitem-input'><textarea name="c4[medication]" placeholder="medication" maxlength=200 rows=5 cols=30></textarea></div>
           </div>
         </div>
       </div>
@@ -361,6 +364,8 @@
 <! Add Child Button>
       <button class='button' onclick='app.addChild(this)' id='btnChild'>Add Child</button>
       <button class='button' onclick='app.removeChild(this)' id='btnRemove' style="display:none">Remove Child</button>
+
+      <input type='submit' value='Consent'></input>
 
     </section>
     <section id="consent">
@@ -381,7 +386,10 @@
         </div>
       </div>
 
+      <input type='submit' value='Submit'></input>
+
     </section>
   </article>
+</form>
 </body>
 </html>
